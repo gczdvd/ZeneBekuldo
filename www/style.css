@@ -1,0 +1,289 @@
+body{
+    color: white;
+    font-family: "Mountains of Christmas" !important;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+input{
+    color: black;
+}
+#content{
+    margin-top: 60px;
+    height: calc(100% - 139px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#videos{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.video{
+    margin: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.video p{
+    font-family: "Century Gothic";
+}
+.vidimg{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 20px
+}
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 25px 25px 10px 25px;
+    z-index: 1000;
+}
+.popup img{
+    width: 20vw;
+    border-radius: 10px;
+}
+.popup h1{
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#header{
+    width: 50%;
+    margin: 0 auto;
+}
+#logo{
+    height: 39px;
+    aspect-ratio: 11/4;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: inline-block;
+    background-color: white;
+    background-image: url("youtube.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#search{
+    color: black;
+    font-family: "Roboto";
+    font-weight: 400;
+    border-radius: 2px;
+    border: none;
+    width: calc(100% - 179px);
+    display: inline-block;
+    transform: translateY(calc(-40%));
+    margin-top: 41px;
+    font-weight: bold;
+    font-size: 23px;
+    padding: 5.9px;
+    transform: translateY(-11px);
+}
+#search::placeholder{
+    font-weight: lighter;
+}
+#find{
+    height: 39px;
+    aspect-ratio: 1;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: inline-block;
+    background-color: white;
+    background-image: url("search.png");
+    background-size: 70%;
+    background-position: 35%;
+    background-repeat: no-repeat;
+}
+#promo{
+    float: right;
+    text-align: right;
+    margin-top: 7%;
+    max-width: 58%;
+    margin-right: 25px;
+    opacity: 100%;
+
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+#cancel{
+    position: absolute;
+    left: 31px;
+    top: 24.4px;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    height: 39px;
+    overflow: hidden;
+    z-index: 9998;
+    
+    width: 39px;
+    max-width: fit-content;
+
+    transition: 0.5s;
+}
+#cancel img{
+    height: 39px;
+    display: block;
+    float: left;
+}
+#cancel p{
+    display: block;
+    float: left;
+    padding-left: 5px;
+    margin: 0;
+    margin-top: 19.5px;
+    transform: translateY(-50%);
+}
+#cancel:hover{
+    width: 125px;
+}
+#apilogo{
+    position: absolute;
+    display: block;
+    /*margin-left: 25%;*/
+    right: 25px;
+    top: 25px;
+    height: 30%;
+    /*transform: translateX(-50%);*/
+    
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+#background{
+    position: fixed;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+    width: 110vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    animation-name: back;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+#santa{
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 9999;
+	pointer-events: none;
+    transform: translate(100vw, 75%) scaleX(1);
+}
+@keyframes flyrl {
+    0%{
+        transform: translate(100vw, 75%) scaleX(1);
+    }
+    100%{
+        transform: translate(-100%, -50%) scaleX(1);
+    }
+}
+@keyframes flylr {
+    0%{
+        transform: translate(-100%, 75%) scaleX(-1);
+    }
+    100%{
+        transform: translate(100vw, -50%) scaleX(-1);
+    }
+}
+
+
+
+
+
+@keyframes back{
+    0%{
+        filter: hue-rotate(-180deg) blur(3px);
+    }
+    100%{
+        filter: hue-rotate(180deg) blur(3px);
+    }
+}
+@keyframes logo_to{
+    0%{
+        height: 30%;
+        top: 25px;
+    }
+    100%{
+        height: 120px;
+        top: 12px;
+    }
+}
+@keyframes logo_from{
+    0%{
+        height: 120px;
+        top: 12px;
+    }
+    100%{
+        height: 30%;
+        top: 25px;
+    }
+}
+@keyframes promo_to{
+    0%{
+        opacity: 100%;
+        margin-right: 25px;
+    }
+    100%{
+        opacity: 0%;
+        margin-right: -100%;
+    }
+}
+@keyframes promo_from{
+    0%{
+        opacity: 0%;
+        margin-right: -100%;
+    }
+    100%{
+        opacity: 100%;
+        margin-right: 25px;
+    }
+}
+
+::-webkit-scrollbar{
+    opacity: 0%;
+}
+ 
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(128, 128, 128, 0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 7.5px;
+}  
