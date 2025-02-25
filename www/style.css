@@ -179,6 +179,7 @@ h2{
     left: 0;
     width: 110vw;
     height: 100vh;
+    opacity: 0.5;
     background-color: black;
     background-image: url("media/background.jpg");
     background-repeat: no-repeat, repeat;
