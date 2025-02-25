@@ -70,7 +70,7 @@ input{
     border-bottom-left-radius: 20px;
     display: inline-block;
     background-color: white;
-    background-image: url("youtube.png");
+    background-image: url("media/youtube.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,7 +100,7 @@ input{
     border-bottom-right-radius: 20px;
     display: inline-block;
     background-color: white;
-    background-image: url("search.png");
+    background-image: url("media/search.png");
     background-size: 70%;
     background-position: 35%;
     background-repeat: no-repeat;
@@ -180,7 +180,7 @@ h2{
     width: 110vw;
     height: 100vh;
     background-color: black;
-    background-image: url("background.jpg");
+    background-image: url("media/background.jpg");
     background-repeat: no-repeat, repeat;
     background-size: cover;
     background-attachment: fixed;

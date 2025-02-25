@@ -75,26 +75,6 @@ function select(id){
     clr(true);
 }
 
-function BufferImage(sr){
-    var newImg = new Image();
-    newImg.onload = function(){
-        console.log("Buffered: " + sr);
-    };
-    newImg.src = sr; 
-}
-
-var dir = false;
-var dirs = ["rl", "lr"];
-
-// setInterval(()=>{
-//     console.log("Indít");
-//     setTimeout(()=>{
-//         document.getElementById("santa").style.animationName = "fly" + dirs[dir ? 1 : 0];
-//         console.log("fly" + dirs[dir ? 1 : 0]);
-//         dir = !dir;
-//     }, Math.random() * 10000);
-// }, 30000);
-
 addEventListener("keypress", (e) => {
     if(e.key == "Enter"){
         search();
